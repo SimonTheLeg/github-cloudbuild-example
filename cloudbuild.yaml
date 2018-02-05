@@ -1,5 +1,9 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/${PROJECT_ID}/github-cloudbuild-example:${TAG_NAME}', '.']
+  args: 
+    - 'build'
+    - '-t'
+    - 'gcr.io/${PROJECT_ID}/github-cloudbuild-example:${TAG_NAME}'
+    - '.'
 images:
 - 'gcr.io/${PROJECT_ID}/github-cloudbuild-example:${TAG_NAME}'
